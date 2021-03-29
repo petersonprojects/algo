@@ -1,11 +1,11 @@
 
 // Without using .flat(), create a function to flatten an array.
 // The array given can be infinitely deep, [1, 2, [3, 4]]--> 3 and 4 are two dimensions deep.
-// [1, 2,[3, 4, [5, 6, 7], 8], 9, 10] --> 5, 6, and 7 are three dimensions deep.
+// [1, 2, [3, 4, [5, 6, 7], 8], 9, 10] --> 5, 6, and 7 are three dimensions deep.
 
 // Given an infinitely deep array, flatten it down to one dimension.
 
-// example const exampleArray = [1, 2,[3, 4, [5, 6, 7], 8], 9, 10]
+// example const exampleArray = [1, 2, [3, 4, [5, 6, 7], 8], 9, 10]
 
 // After flattening your array it should look like this ---> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
@@ -16,7 +16,7 @@
 // b acts as our iterative (current) value. it represents the current value being checked at any given run-time
 
 function reducer(a, b){
-    
+
     // the first thing we must do when calling the reducer is check if the current item is an array
     // remember that this function is called inside of the .reduce() which iterates through an array or obj
     // if the item we're on IS an array, lets try to reduce it even further, by again recursively calling
@@ -43,7 +43,7 @@ function flatten(array){
 }
 
 
-const exampleArray = [1, 2,[3,4,[5,6,7], 8], 9, 10];
+const exampleArray = [1, 2,[3, 4, [5, 6, 7], 8], 9, 10];
 
 let result = flatten(exampleArray);
 
